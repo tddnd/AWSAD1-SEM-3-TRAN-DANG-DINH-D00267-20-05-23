@@ -1,6 +1,6 @@
 ﻿namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
 {
-    partial class List
+    partial class Detail
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,50 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            buttonLogout = new Button();
+            buttonBack = new Button();
             buttonExitApp = new Button();
             SuspendLayout();
             // 
-            // buttonLogout
+            // buttonBack
             // 
-            buttonLogout.AutoSize = true;
-            buttonLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonLogout.Location = new Point(794, 472);
-            buttonLogout.Name = "buttonLogout";
-            buttonLogout.Size = new Size(90, 31);
-            buttonLogout.TabIndex = 0;
-            buttonLogout.Text = "Đăng xuất";
-            buttonLogout.UseVisualStyleBackColor = true;
-            buttonLogout.Click += buttonLogout_Click;
+            buttonBack.AutoSize = true;
+            buttonBack.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonBack.Location = new Point(812, 468);
+            buttonBack.Name = "buttonBack";
+            buttonBack.Size = new Size(75, 31);
+            buttonBack.TabIndex = 2;
+            buttonBack.Text = "Trở lại";
+            buttonBack.UseVisualStyleBackColor = true;
             // 
             // buttonExitApp
             // 
             buttonExitApp.AutoSize = true;
             buttonExitApp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonExitApp.Location = new Point(890, 472);
+            buttonExitApp.Location = new Point(893, 468);
             buttonExitApp.Name = "buttonExitApp";
             buttonExitApp.Size = new Size(75, 31);
-            buttonExitApp.TabIndex = 1;
+            buttonExitApp.TabIndex = 3;
             buttonExitApp.Text = "Thoát";
             buttonExitApp.UseVisualStyleBackColor = true;
-            buttonExitApp.Click += buttonExitApp_Click;
             // 
-            // List
+            // Detail
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(buttonExitApp);
-            Controls.Add(buttonLogout);
-            Name = "List";
+            Controls.Add(buttonBack);
+            Name = "Detail";
             Size = new Size(982, 516);
-            Load += List_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button buttonLogout;
+        private Button buttonBack;
         private Button buttonExitApp;
     }
 }

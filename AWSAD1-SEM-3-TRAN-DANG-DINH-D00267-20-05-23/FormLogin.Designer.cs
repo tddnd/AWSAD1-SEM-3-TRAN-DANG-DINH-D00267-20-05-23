@@ -28,98 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelPassword = new Label();
-            textPassword = new TextBox();
-            buttonLogin = new Button();
-            buttonExit = new Button();
-            labelUserName = new Label();
-            textUserName = new TextBox();
+            panel1 = new Panel();
+            label1 = new Label();
             SuspendLayout();
             // 
-            // labelPassword
+            // panel1
             // 
-            labelPassword.AutoSize = true;
-            labelPassword.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            labelPassword.Location = new Point(26, 67);
-            labelPassword.Name = "labelPassword";
-            labelPassword.Size = new Size(93, 25);
-            labelPassword.TabIndex = 1;
-            labelPassword.Text = "Mật Khẩu";
+            panel1.Location = new Point(1, 43);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(982, 516);
+            panel1.TabIndex = 6;
             // 
-            // textPassword
+            // label1
             // 
-            textPassword.Location = new Point(126, 72);
-            textPassword.Name = "textPassword";
-            textPassword.Size = new Size(223, 23);
-            textPassword.TabIndex = 3;
-            textPassword.TextChanged += textPassword_TextChanged;
-            // 
-            // buttonLogin
-            // 
-            buttonLogin.AutoSize = true;
-            buttonLogin.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonLogin.Location = new Point(126, 112);
-            buttonLogin.Name = "buttonLogin";
-            buttonLogin.Size = new Size(89, 29);
-            buttonLogin.TabIndex = 4;
-            buttonLogin.Text = "Đăng Nhập";
-            buttonLogin.UseVisualStyleBackColor = true;
-            buttonLogin.Click += buttonLogin_Click;
-            // 
-            // buttonExit
-            // 
-            buttonExit.AutoSize = true;
-            buttonExit.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonExit.Location = new Point(274, 112);
-            buttonExit.Name = "buttonExit";
-            buttonExit.Size = new Size(75, 29);
-            buttonExit.TabIndex = 5;
-            buttonExit.Text = "Thoát";
-            buttonExit.UseVisualStyleBackColor = true;
-            buttonExit.Click += buttonExit_Click;
-            // 
-            // labelUserName
-            // 
-            labelUserName.AutoSize = true;
-            labelUserName.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            labelUserName.Location = new Point(26, 24);
-            labelUserName.Name = "labelUserName";
-            labelUserName.Size = new Size(94, 25);
-            labelUserName.TabIndex = 0;
-            labelUserName.Text = "Tài Khoản";
-            // 
-            // textUserName
-            // 
-            textUserName.Location = new Point(126, 29);
-            textUserName.Name = "textUserName";
-            textUserName.Size = new Size(223, 23);
-            textUserName.TabIndex = 2;
-            textUserName.TextChanged += textUserName_TextChanged;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(429, -2);
+            label1.Name = "label1";
+            label1.Size = new Size(107, 32);
+            label1.TabIndex = 0;
+            label1.Text = "Hộp Thư";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(384, 161);
-            Controls.Add(buttonExit);
-            Controls.Add(buttonLogin);
-            Controls.Add(textPassword);
-            Controls.Add(textUserName);
-            Controls.Add(labelPassword);
-            Controls.Add(labelUserName);
+            ClientSize = new Size(984, 561);
+            Controls.Add(label1);
+            Controls.Add(panel1);
             Name = "FormLogin";
             Text = "Đăng Nhập";
-            Load += FormLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label labelPassword;
-        private TextBox textPassword;
-        private Button buttonLogin;
-        private Button buttonExit;
-        private Label labelUserName;
-        private TextBox textUserName;
+        private Panel panel1;
+        private Label label1;
     }
 }
