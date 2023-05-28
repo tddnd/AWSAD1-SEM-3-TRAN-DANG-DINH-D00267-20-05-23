@@ -30,13 +30,17 @@
         {
             buttonLogout = new Button();
             buttonExitApp = new Button();
+            label1 = new Label();
+            listMail = new DataGridView();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)listMail).BeginInit();
             SuspendLayout();
             // 
             // buttonLogout
             // 
             buttonLogout.AutoSize = true;
             buttonLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonLogout.Location = new Point(794, 472);
+            buttonLogout.Location = new Point(803, 520);
             buttonLogout.Name = "buttonLogout";
             buttonLogout.Size = new Size(90, 31);
             buttonLogout.TabIndex = 0;
@@ -48,7 +52,7 @@
             // 
             buttonExitApp.AutoSize = true;
             buttonExitApp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonExitApp.Location = new Point(890, 472);
+            buttonExitApp.Location = new Point(899, 520);
             buttonExitApp.Name = "buttonExitApp";
             buttonExitApp.Size = new Size(75, 31);
             buttonExitApp.TabIndex = 1;
@@ -56,15 +60,50 @@
             buttonExitApp.UseVisualStyleBackColor = true;
             buttonExitApp.Click += buttonExitApp_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(3, 8);
+            label1.Name = "label1";
+            label1.Size = new Size(100, 25);
+            label1.TabIndex = 4;
+            label1.Text = "Danh sách";
+            label1.Click += label1_Click;
+            // 
+            // listMail
+            // 
+            listMail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            listMail.Location = new Point(3, 40);
+            listMail.Name = "listMail";
+            listMail.RowTemplate.Height = 25;
+            listMail.Size = new Size(971, 474);
+            listMail.TabIndex = 5;
+            // 
+            // button1
+            // 
+            button1.AutoSize = true;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(899, 6);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 31);
+            button1.TabIndex = 6;
+            button1.Text = "Gửi thư";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // List
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
+            Controls.Add(listMail);
+            Controls.Add(label1);
             Controls.Add(buttonExitApp);
             Controls.Add(buttonLogout);
             Name = "List";
-            Size = new Size(982, 516);
+            Size = new Size(977, 554);
             Load += List_Load;
+            ((System.ComponentModel.ISupportInitialize)listMail).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -73,5 +112,8 @@
 
         private Button buttonLogout;
         private Button buttonExitApp;
+        private Label label1;
+        private DataGridView listMail;
+        private Button button1;
     }
 }
