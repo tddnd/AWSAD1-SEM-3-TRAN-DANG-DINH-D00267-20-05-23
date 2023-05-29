@@ -13,6 +13,7 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
 {
     public partial class List : UserControl
     {
+        public event EventHandler OpenAddForm;
         private static List instance;
         public static List Instance
         {
@@ -76,11 +77,12 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
             CreateColumForDataGirdView();
         }
 
-        
-
-        private void label1_Click(object sender, EventArgs e)
+        private void buttonOpenAddMail_Click(object sender, EventArgs e)
         {
-
+            if (OpenAddForm != null)
+            {
+                OpenAddForm.Invoke(this, e);
+            }
         }
         #endregion
     }

@@ -32,7 +32,7 @@
             buttonExitApp = new Button();
             label1 = new Label();
             listMail = new DataGridView();
-            button1 = new Button();
+            buttonOpenAddMail = new Button();
             ((System.ComponentModel.ISupportInitialize)listMail).BeginInit();
             SuspendLayout();
             // 
@@ -46,7 +46,6 @@
             buttonLogout.TabIndex = 0;
             buttonLogout.Text = "Đăng xuất";
             buttonLogout.UseVisualStyleBackColor = true;
-            buttonLogout.Click += buttonLogout_Click;
             // 
             // buttonExitApp
             // 
@@ -58,7 +57,6 @@
             buttonExitApp.TabIndex = 1;
             buttonExitApp.Text = "Thoát";
             buttonExitApp.UseVisualStyleBackColor = true;
-            buttonExitApp.Click += buttonExitApp_Click;
             // 
             // label1
             // 
@@ -69,7 +67,6 @@
             label1.Size = new Size(100, 25);
             label1.TabIndex = 4;
             label1.Text = "Danh sách";
-            label1.Click += label1_Click;
             // 
             // listMail
             // 
@@ -80,22 +77,23 @@
             listMail.Size = new Size(971, 474);
             listMail.TabIndex = 5;
             // 
-            // button1
+            // buttonOpenAddMail
             // 
-            button1.AutoSize = true;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(899, 6);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 31);
-            button1.TabIndex = 6;
-            button1.Text = "Gửi thư";
-            button1.UseVisualStyleBackColor = true;
+            buttonOpenAddMail.AutoSize = true;
+            buttonOpenAddMail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonOpenAddMail.Location = new Point(899, 6);
+            buttonOpenAddMail.Name = "buttonOpenAddMail";
+            buttonOpenAddMail.Size = new Size(75, 31);
+            buttonOpenAddMail.TabIndex = 6;
+            buttonOpenAddMail.Text = "Gửi thư";
+            buttonOpenAddMail.UseVisualStyleBackColor = true;
+            buttonOpenAddMail.Click += buttonOpenAddMail_Click;
             // 
             // List
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button1);
+            Controls.Add(buttonOpenAddMail);
             Controls.Add(listMail);
             Controls.Add(label1);
             Controls.Add(buttonExitApp);
@@ -114,6 +112,6 @@
         private Button buttonExitApp;
         private Label label1;
         private DataGridView listMail;
-        private Button button1;
+        private Button buttonOpenAddMail;
     }
 }

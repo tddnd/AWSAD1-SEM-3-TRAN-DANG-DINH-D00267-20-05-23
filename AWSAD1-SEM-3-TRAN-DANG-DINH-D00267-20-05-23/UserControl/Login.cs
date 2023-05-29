@@ -10,13 +10,18 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using System.Diagnostics.Metrics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
 {
 
     public partial class Login : UserControl
     {
+        public int UserId;
+        public string UserName;
+
         public event EventHandler SubmitFormEmit;
+
         private static Login instance;
         public static Login Instance
         {
@@ -27,19 +32,17 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
                 return instance;
             }
         }
-        string str = "Data Source=MSI-TRIDENT-X-P\\N1GHTMARE1VN18;Initial Catalog=AWSAD1;Integrated Security=True;MultipleActiveResultSets=True";
-        SqlConnection kn = new SqlConnection();
-        SqlCommand cmd = new SqlCommand();
+
+      
 
         public Login()
         {
             InitializeComponent();
         }
-
+    
         private void Login_Load(object sender, EventArgs e)
         {
-            kn = new SqlConnection(str);
-            kn.Open();
+         
         }
 
         private void textTaiKhoan_TextChanged(object sender, EventArgs e)
@@ -54,24 +57,30 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            cmd = kn.CreateCommand();
+            SqlConnection connect = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            connect = new SqlConnection(FormMail.linkDB);
+            connect.Open();
+            cmd = connect.CreateCommand();
+            cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT * FROM [USER] WHERE Username = '" + textUsername.Text + "' AND Password = '" + textPassword.Text + "'";
-            SqlDataReader DR = cmd.ExecuteReader();
-            // DBCheckLogin dBCheckLogin = new DBCheckLogin(DR.Read());
+            SqlDataReader LoginUser = cmd.ExecuteReader();
 
-            if (DR.Read() == true)
+            if (LoginUser.Read() == true)
             {
-                DR.Close();
                 MessageBox.Show("Đăng nhập thành công");
-
+                FormMail.UserId = LoginUser.GetInt32(0);
+                FormMail.UserName = textUsername.Text;
                 if (SubmitFormEmit != null)
                 {
                     SubmitFormEmit.Invoke(this, e);
+                    LoginUser.Close();
                 }
             }
             else
             {
                 MessageBox.Show("Kiểm tra lại tên tài khoản và mật khẩu");
+                LoginUser.Close();
             }
 
         }

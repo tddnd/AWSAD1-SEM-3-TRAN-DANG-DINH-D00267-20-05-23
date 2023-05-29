@@ -85,6 +85,7 @@
             Controls.Add(panelFormUC);
             Name = "FormMail";
             Text = "Hòm Thư";
+            Load += FormMail_Load;
             panelFormUC.ResumeLayout(false);
             ResumeLayout(false);
         }

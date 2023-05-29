@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            labelAddHeader = new Label();
             buttonBack = new Button();
             buttonExitApp = new Button();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            textSendName = new TextBox();
+            textSendTitle = new TextBox();
+            textSendContent = new TextBox();
             buttonSendMail = new Button();
             SuspendLayout();
             // 
-            // label1
+            // labelAddHeader
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(3, 8);
-            label1.Name = "label1";
-            label1.Size = new Size(74, 25);
-            label1.TabIndex = 5;
-            label1.Text = "Gửi thư";
+            labelAddHeader.AutoSize = true;
+            labelAddHeader.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            labelAddHeader.Location = new Point(3, 8);
+            labelAddHeader.Name = "labelAddHeader";
+            labelAddHeader.Size = new Size(74, 25);
+            labelAddHeader.TabIndex = 5;
+            labelAddHeader.Text = "Gửi thư";
             // 
             // buttonBack
             // 
@@ -104,30 +104,30 @@
             label4.TabIndex = 10;
             label4.Text = "Nội dung";
             // 
-            // textBox1
+            // textSendName
             // 
-            textBox1.Location = new Point(114, 52);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(500, 23);
-            textBox1.TabIndex = 1;
+            textSendName.Location = new Point(114, 52);
+            textSendName.Name = "textSendName";
+            textSendName.Size = new Size(500, 23);
+            textSendName.TabIndex = 1;
             // 
-            // textBox2
+            // textSendTitle
             // 
-            textBox2.Location = new Point(114, 102);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(500, 23);
-            textBox2.TabIndex = 2;
+            textSendTitle.Location = new Point(114, 102);
+            textSendTitle.Name = "textSendTitle";
+            textSendTitle.Size = new Size(500, 23);
+            textSendTitle.TabIndex = 2;
             // 
-            // textBox3
+            // textSendContent
             // 
-            textBox3.AcceptsReturn = true;
-            textBox3.AcceptsTab = true;
-            textBox3.Location = new Point(114, 152);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.ScrollBars = ScrollBars.Vertical;
-            textBox3.Size = new Size(500, 250);
-            textBox3.TabIndex = 3;
+            textSendContent.AcceptsReturn = true;
+            textSendContent.AcceptsTab = true;
+            textSendContent.Location = new Point(114, 152);
+            textSendContent.Multiline = true;
+            textSendContent.Name = "textSendContent";
+            textSendContent.ScrollBars = ScrollBars.Vertical;
+            textSendContent.Size = new Size(500, 250);
+            textSendContent.TabIndex = 3;
             // 
             // buttonSendMail
             // 
@@ -141,37 +141,38 @@
             buttonSendMail.UseVisualStyleBackColor = true;
             buttonSendMail.Click += buttonSendMail_Click;
             // 
-            // AddMail
+            // Add
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(buttonSendMail);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textSendContent);
+            Controls.Add(textSendTitle);
+            Controls.Add(textSendName);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(buttonExitApp);
             Controls.Add(buttonBack);
-            Controls.Add(label1);
-            Name = "AddMail";
+            Controls.Add(labelAddHeader);
+            Name = "Add";
             Size = new Size(977, 554);
+            Load += Add_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private Label labelAddHeader;
         private Button buttonBack;
         private Button buttonExitApp;
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox textSendName;
+        private TextBox textSendTitle;
+        private TextBox textSendContent;
         private Button buttonSendMail;
     }
 }
