@@ -46,6 +46,7 @@
             buttonLogout.TabIndex = 0;
             buttonLogout.Text = "Đăng xuất";
             buttonLogout.UseVisualStyleBackColor = true;
+            buttonLogout.Click += buttonLogout_Click;
             // 
             // buttonExitApp
             // 
@@ -57,6 +58,7 @@
             buttonExitApp.TabIndex = 1;
             buttonExitApp.Text = "Thoát";
             buttonExitApp.UseVisualStyleBackColor = true;
+            buttonExitApp.Click += buttonExitApp_Click;
             // 
             // label1
             // 

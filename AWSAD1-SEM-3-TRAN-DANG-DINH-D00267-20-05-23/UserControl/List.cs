@@ -14,22 +14,13 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
     public partial class List : UserControl
     {
         public event EventHandler OpenAddForm;
-        private static List instance;
-        public static List Instance
-        {
-            get
-            {
-                if (instance == null)
-                    instance = new List();
-                return instance;
-            }
-        }
+        public event EventHandler BackToLogin;
+
         public List()
         {
             InitializeComponent();
         }
 
-        #region Method
         void CreateColumForDataGirdView()
         {
             var colName = new DataGridViewTextBoxColumn();
@@ -59,12 +50,13 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
         {
             listMail.DataSource = ListMail.Instance.ListMailData;
         }
-        #endregion
 
-        #region Event
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-
+            if (BackToLogin != null)
+            {
+                BackToLogin.Invoke(this, e);
+            }
         }
 
         private void buttonExitApp_Click(object sender, EventArgs e)
@@ -84,6 +76,5 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
                 OpenAddForm.Invoke(this, e);
             }
         }
-        #endregion
     }
 }

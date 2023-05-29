@@ -17,23 +17,7 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
 
     public partial class Login : UserControl
     {
-        public int UserId;
-        public string UserName;
-
         public event EventHandler SubmitFormEmit;
-
-        private static Login instance;
-        public static Login Instance
-        {
-            get
-            {
-                if (instance == null)
-                    instance = new Login();
-                return instance;
-            }
-        }
-
-      
 
         public Login()
         {
@@ -43,16 +27,6 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
         private void Login_Load(object sender, EventArgs e)
         {
          
-        }
-
-        private void textTaiKhoan_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textPassword_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -85,23 +59,9 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
 
         }
 
-        private void SubmitForm(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonExitApp_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-    }
-
-    public class DBCheckLogin
-    {
-        public bool Result { get; set; }
-        public DBCheckLogin(bool result)
-        {
-            Result = result;
         }
     }
 }

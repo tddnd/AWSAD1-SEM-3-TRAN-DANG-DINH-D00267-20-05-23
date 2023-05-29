@@ -68,7 +68,6 @@
             textPassword.AccessibleRole = AccessibleRole.None;
             resources.ApplyResources(textPassword, "textPassword");
             textPassword.Name = "textPassword";
-            textPassword.TextChanged += textPassword_TextChanged;
             // 
             // label2
             // 

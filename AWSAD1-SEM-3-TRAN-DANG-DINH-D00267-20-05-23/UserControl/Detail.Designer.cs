@@ -37,7 +37,7 @@
             // 
             buttonBack.AutoSize = true;
             buttonBack.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonBack.Location = new Point(791, 473);
+            buttonBack.Location = new Point(818, 520);
             buttonBack.Name = "buttonBack";
             buttonBack.Size = new Size(75, 31);
             buttonBack.TabIndex = 2;
@@ -48,7 +48,7 @@
             // 
             buttonExitApp.AutoSize = true;
             buttonExitApp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonExitApp.Location = new Point(893, 473);
+            buttonExitApp.Location = new Point(899, 520);
             buttonExitApp.Name = "buttonExitApp";
             buttonExitApp.Size = new Size(75, 31);
             buttonExitApp.TabIndex = 3;
