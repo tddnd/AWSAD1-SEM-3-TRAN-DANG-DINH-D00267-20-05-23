@@ -23,7 +23,7 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
         {
             InitializeComponent();
         }
-    
+
         private void Login_Load(object sender, EventArgs e)
         {
             textUsername.Text = "admin@gmail.com";
@@ -63,6 +63,14 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
         private void buttonExitApp_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonLogin_Click(sender, e);
+            }
         }
     }
 }

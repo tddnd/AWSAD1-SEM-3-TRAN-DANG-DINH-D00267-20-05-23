@@ -68,6 +68,7 @@
             textPassword.AccessibleRole = AccessibleRole.None;
             resources.ApplyResources(textPassword, "textPassword");
             textPassword.Name = "textPassword";
+            textPassword.KeyUp += textPassword_KeyUp;
             // 
             // label2
             // 

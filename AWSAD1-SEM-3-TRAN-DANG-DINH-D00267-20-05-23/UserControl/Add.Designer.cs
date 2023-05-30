@@ -128,6 +128,7 @@
             textSendContent.ScrollBars = ScrollBars.Vertical;
             textSendContent.Size = new Size(500, 250);
             textSendContent.TabIndex = 3;
+            textSendContent.KeyUp += textSendContent_KeyUp;
             // 
             // buttonSendMail
             // 
