@@ -78,6 +78,7 @@
             listMail.RowTemplate.Height = 25;
             listMail.Size = new Size(971, 474);
             listMail.TabIndex = 5;
+            listMail.CellClick += listMail_CellClick;
             // 
             // buttonOpenAddMail
             // 

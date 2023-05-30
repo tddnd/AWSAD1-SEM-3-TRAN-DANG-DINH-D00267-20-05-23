@@ -26,7 +26,8 @@ namespace AWSAD1_SEM_3_TRAN_DANG_DINH_D00267_20_05_23
     
         private void Login_Load(object sender, EventArgs e)
         {
-         
+            textUsername.Text = "admin@gmail.com";
+            textPassword.Text = "123qwe";
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
