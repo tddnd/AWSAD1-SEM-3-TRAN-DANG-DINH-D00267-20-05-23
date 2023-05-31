@@ -22,3 +22,18 @@ CREATE TABLE [LISTMAIL] (
 	isRead BIT,
 	senderName NVARCHAR(50),
 )
+
+go
+
+INSERT INTO [USER] (Username,Password,GroupId) OUTPUT inserted.id
+VALUES('admin@gmail.com', '123qwe', null)
+
+go
+
+INSERT INTO [USER] (Username,Password,GroupId) OUTPUT inserted.id
+VALUES('user1@gmail.com', '123qwe', null)
+
+go
+
+INSERT INTO [USER] (Username,Password,GroupId) OUTPUT inserted.id
+VALUES('user2@gmail.com', '123qwe', null)
